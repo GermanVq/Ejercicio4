@@ -46,7 +46,7 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 120, -1));
 
         jLabel2.setText("Número de metros cuadrados");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 150, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 190, -1));
 
         jLabel3.setText("Cuota Inicial");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
@@ -81,6 +81,11 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         cmdborrar.setText("BORRAR");
+        cmdborrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdborrarActionPerformed(evt);
+            }
+        });
         getContentPane().add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, -1, -1));
 
         pack();
@@ -121,6 +126,15 @@ public class Interfaz extends javax.swing.JFrame {
                       
           } 
     }//GEN-LAST:event_txtmetroscuadradosKeyTyped
+
+    private void cmdborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdborrarActionPerformed
+    txtmetroscuadrados.setText("");
+     txtcuotainicial.setText("");
+     txtmontodecuota.setText("");
+     
+     
+     txtmetroscuadrados.requestFocusInWindow();
+    }//GEN-LAST:event_cmdborrarActionPerformed
 
     /**
      * @param args the command line arguments
